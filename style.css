@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: hsl(0, 0%, 98%);
+}
+header {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#logo {
+    position: relative;
+    width: 100px;
+    margin-top: 40px;
+    margin-right: 10px;
+    user-select: none;
+}
+#others {
+    position: relative;
+    width: 70%;
+    min-width: 425px;
+    margin-top: 40px;
+}
+#links {
+    position: relative;
+    display: flex;
+    list-style-type: none;
+}
+#links li {
+    display: inline-flex;
+    margin: 0 3%;
+}
+#links li:nth-last-child(1){
+    margin-right: 0;
+}
+#links li:nth-last-child(1), #links li:nth-last-child(2) {
+    margin-left: calc(3% + 10px);
+}
+#links a {
+    font-family: "Epilogue", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: hsl(0, 0%, 41%);
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+}
+#links a:hover {
+    color: hsl(0, 0%, 8%);
+}
+.arrow {
+    position: relative;
+    height: 6px;
+    width: 10px;
+    left: 115%;
+    top: -50%;
+    user-select: none;
+    background-image: url("icon-arrow-down.svg");
+    background-size: cover;
+    background-position: center;
+}
+#links li:nth-child(1):hover div, #links li:nth-child(2):hover div {
+    background-image: url("icon-arrow-up.svg");
+}
+#actions {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 11%;
+    min-width: 215px;
+    margin-top: 40px;
+}
+#actions a {
+    font-family: "Epilogue", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: hsl(0, 0%, 41%);
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+}
+#actions a:hover {
+    color: hsl(0, 0%, 8%);
+}
+#register {
+    position: relative;
+    right: 0;
+    width: 120px;
+    height: 42px;
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: border-color 0.2s ease-out;
+}
+#register p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Epilogue", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: hsl(0, 0%, 41%);
+    user-select: none;
+}
+#register:hover {
+    border-color: hsl(0, 0%, 8%);
+}
+#menu_icon {
+    position: absolute;
+    display: none;
+    width: 70px;
+    right: 7%;
+    margin-top: 40px;
+    margin-right: 10px;
+    user-select: none;
+}
+main {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    display: flex;
+}
+#content, #picture {
+    position: relative;
+    width: 50%;
+    height: calc(100vh - 200px);
+}
+#content {
+    margin-left: 12.5%;
+    margin-right: 3%;
+}
+#picture {
+    margin-right: 12.5%;
+}
+#title {
+    position: relative;
+    top: 20%;
+    font-family: "Epilogue", sans-serif;
+    font-size: 75px;
+    font-weight: 900;
+    color: hsl(0, 0%, 8%);
+}
+#subtitle {
+    position: relative;
+    top: 27%;
+    font-family: "Epilogue", sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+    color: hsl(0, 0%, 41%);
+    line-height: 30px;
+}
+#learn_more {
+    position: relative;
+    top: 35%;
+    width: 155px;
+    height: 55px;
+    background: hsl(0, 0%, 8%);
+    border: 1px solid hsl(0, 0%, 8%);
+    border-radius: 13px;
+    cursor: pointer;
+    transition: background 0.2s ease-out;
+}
+#learn_more p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Epilogue", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: hsl(0, 0%, 98%);
+    user-select: none;
+    white-space: nowrap;
+    transition: color 0.2s ease-out;
+}
+#learn_more:hover {
+    background: hsl(0, 0%, 98%);
+}
+#learn_more:hover p {
+    color: hsl(0, 0%, 8%);
+}
+#brands {
+    position: relative;
+    top: 55%;
+    display: flex;
+    list-style-type: none;
+}
+#brands li {
+    margin: 0 30px;
+}
+#brands li:nth-child(1) {
+    margin-left: 0;
+}
+#brands img {
+    user-select: none;
+}
+#picture img {
+    position: relative;
+    left: 50%;
+    bottom: -50%;
+    transform: translate(-50%, -50%);
+    height: 725px;
+    user-select: none;
+}
+#mobile {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 1;
+}
+.activated_menu #mobile {
+    display: block;
+}
+.activated_menu #content, .activated_menu #picture {
+    display: none;
+}
+#mobile_links {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#mobile_links li {
+    display: inline-flex;
+    margin: 15% 0;
+}
+#mobile_links a {
+    font-family: "Epilogue", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: hsl(0, 0%, 41%);
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+}
+.mobile_arrow {
+    position: relative;
+    height: 6px;
+    width: 10px;
+    left: 115%;
+    top: -50%;
+    user-select: none;
+    background-image: url("icon-arrow-down.svg");
+    background-size: cover;
+    background-position: center;
+}
+#mobile_login {
+    font-family: "Epilogue", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: hsl(0, 0%, 41%);
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+}
+#mobile_register {
+    position: relative;
+    right: 0;
+    width: 120px;
+    height: 42px;
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 35px;
+    transition: border-color 0.2s ease-out;
+}
+#mobile_register p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Epilogue", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: hsl(0, 0%, 41%);
+    user-select: none;
+}
+#cross {
+    position: absolute;
+    width: 40px;
+    right: 0;
+    top: 0;
+    user-select: none;
+}
+@media screen and (width <= 1385px) {
+    header {
+        padding-bottom: 0;
+        justify-content: initial;
+    }
+    #logo {
+        left: 7%;
+        margin-top: 60px;
+    }
+    #others, #actions {
+        display: none;
+    }
+    #menu_icon {
+        display: block;
+    }
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 50px;
+    }
+    #content {
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 320px;
+        transform: scale(150%);
+    }
+    #picture {
+        margin-right: 0;
+        height: auto;
+    }
+    #picture img {
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+    #title {
+        top: 0;
+        font-size: 60px;
+        text-align: center;
+    }
+    #subtitle {
+        top: 7%;
+        text-align: center;
+    }
+    #learn_more {
+        width: initial;
+        top: 14%;
+    }
+    #brands {
+        top: 21%;
+        flex-direction: column;
+        align-items: center;
+    }
+    #brands li {
+        margin: 30px 0;
+    }
+}
+@media screen and (width <= 750px) {
+    #picture {
+        overflow: hidden;
+    }
+}
+@media screen and (height <= 800px) {
+    #content {
+        padding-top: 180px;
+    }
+    #title {
+        font-size: 40px;
+    }
+    #subtitle {
+        font-size: 14px;
+    }
+}
